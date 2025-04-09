@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://chacha86-db.internal:5432/surl_prod
+    username: postgres
+    password: m5X9wVJssPlJkn7
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      auto-commit: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+        highlight_sql: false
+        use_sql_comments: false
+
+logging:
+  level:
+    com.example: INFO
+    org.hibernate.SQL: INFO
+    org.hibernate.orm.jdbc.bind: INFO
+    org.hibernate.orm.jdbc.extract: INFO
+    org.springframework.transaction.interceptor: INFO
