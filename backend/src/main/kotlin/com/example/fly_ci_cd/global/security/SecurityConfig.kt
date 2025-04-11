@@ -1,6 +1,7 @@
 package com.example.fly_ci_cd.global.security
 
 
+import com.example.fly_ci_cd.global.app.AppConfig
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpMethod
@@ -44,7 +45,7 @@ class SecurityConfig {
     @Bean
     fun corsConfigurationSource(): UrlBasedCorsConfigurationSource {
         val configuration = CorsConfiguration().apply {
-            allowedOrigins = listOf("https://cdpn.io", "http://localhost:3000")
+            allowedOrigins = listOf(AppConfig.getSiteFrontUrl())
             allowedMethods = listOf("GET", "POST", "PUT", "DELETE")
             allowCredentials = true
             allowedHeaders = listOf("*")
