@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://chacha86-db.internal:5432/surl_prod
+    url: jdbc:postgresql://chacha86-db-2.internal:5432/app_25_04_11
     username: postgres
-    password: m5X9wVJssPlJkn7
+    password: "${custom.prod.db.password}"
     driver-class-name: org.postgresql.Driver
     hikari:
       auto-commit: false
