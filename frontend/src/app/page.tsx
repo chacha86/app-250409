@@ -1,3 +1,5 @@
+import ClientPage from "@/app/ClientPage";
+
 export default function Home() {
-  return <h1>Hello World</h1>;
+  return <ClientPage />;
 }
