@@ -3,6 +3,12 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+interface Post {
+  id: number;
+  title: string;
+  content: string;
+}
+
 export default function ClientPage() {
   const [posts, setPosts] = useState([]);
 
@@ -16,7 +22,7 @@ export default function ClientPage() {
     <>
       <h1>글 목록</h1>
       <ul>
-        {posts.map((post: any) => (
+        {posts.map((post: Post) => (
           <li key={post.id}>
             <Link href={`/posts/${post.id}`}>{post.title}</Link>
           </li>
